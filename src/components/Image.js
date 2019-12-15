@@ -31,9 +31,10 @@ const Image = () => {
       style={{
         width: `100%`,
         height: `auto`,
-        maxWidth: `250px`,
+        maxWidth: `200px`,
         margin: `1.5rem auto`,
         borderRadius: `100%`,
+        border: `solid 10px var(--primaryColor)`,
       }}
       fluid={data.placeholderImage.childImageSharp.fluid}
     />

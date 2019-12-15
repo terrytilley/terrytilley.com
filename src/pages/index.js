@@ -30,7 +30,13 @@ const IndexPage = () => {
         }}
       >
         <Image />
-        <h1 style={{ ...scale(1.3), marginBottom: rhythm(0.8) }}>
+        <h1
+          style={{
+            ...scale(1.2),
+            marginTop: rhythm(1),
+            marginBottom: rhythm(1),
+          }}
+        >
           {data.site.siteMetadata.title}
         </h1>
         <p style={{ ...scale(0.4) }}>

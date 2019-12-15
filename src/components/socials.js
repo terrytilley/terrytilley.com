@@ -1,6 +1,6 @@
 import React from "react"
 
-import { scale } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 
 function Socials() {
   const links = [
@@ -21,7 +21,12 @@ function Socials() {
   return (
     <ul
       className="socials"
-      style={{ margin: "0px", padding: "0px", listStyle: "none" }}
+      style={{
+        margin: `0`,
+        marginTop: rhythm(1.5),
+        padding: "0px",
+        listStyle: "none",
+      }}
     >
       {links.map(({ title, link }) => (
         <li key={title}>
