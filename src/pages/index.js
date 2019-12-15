@@ -1,21 +1,49 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
-import Layout from "../components/Layout"
-import Image from "../components/Image"
-import SEO from "../components/SEO"
+import Socials from "../components/socials"
+import Layout from "../components/layout"
+import Image from "../components/image"
+import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div
+        style={{
+          maxWidth: `600px`,
+          margin: `0 auto`,
+          textAlign: `center`,
+        }}
+      >
+        <Image />
+        <h1>{data.site.siteMetadata.title}</h1>
+        <p>
+          Front end developer at{" "}
+          <a
+            href="https://www.serpico.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Serpico
+          </a>{" "}
+          👋
+        </p>
+        <Socials />
+      </div>
+    </Layout>
+  )
+}
 
 export default IndexPage
