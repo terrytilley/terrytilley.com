@@ -21,8 +21,8 @@ module.exports = {
         name: `terrytilley.com`,
         short_name: `terrytilley`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#2b90d9`,
+        theme_color: `#2b90d9`,
         display: `minimal-ui`,
         icon: `src/images/android-chrome-512x512.png`, // This path is relative to the root of the site.
       },
@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-65282291-1`,
+        trackingId: `UA-154655025-1`,
       },
     },
     {
