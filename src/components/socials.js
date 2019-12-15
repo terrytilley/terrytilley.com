@@ -1,5 +1,6 @@
 import React from "react"
-import "./socials.css"
+
+import { scale } from "../utils/typography"
 
 function Socials() {
   const links = [
@@ -18,10 +19,18 @@ function Socials() {
   ]
 
   return (
-    <ul className="socials">
+    <ul
+      className="socials"
+      style={{ margin: "0px", padding: "0px", listStyle: "none" }}
+    >
       {links.map(({ title, link }) => (
         <li key={title}>
-          <a href={link} target="_blank" rel="noopener noreferrer">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ ...scale(0.275), textDecoration: "none" }}
+          >
             {title}
           </a>
         </li>

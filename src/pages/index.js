@@ -1,10 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Socials from "../components/socials"
-import Layout from "../components/layout"
-import Image from "../components/image"
+import { rhythm, scale } from "../utils/typography"
+
 import SEO from "../components/seo"
+import Image from "../components/image"
+import Layout from "../components/layout"
+import Socials from "../components/socials"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -22,14 +24,16 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div
         style={{
-          maxWidth: `600px`,
           margin: `0 auto`,
+          maxWidth: `600px`,
           textAlign: `center`,
         }}
       >
         <Image />
-        <h1>{data.site.siteMetadata.title}</h1>
-        <p>
+        <h1 style={{ ...scale(1.3), marginBottom: rhythm(0.8) }}>
+          {data.site.siteMetadata.title}
+        </h1>
+        <p style={{ ...scale(0.4) }}>
           Front end developer at{" "}
           <a
             href="https://www.serpico.io/"
