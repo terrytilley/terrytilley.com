@@ -1,0 +1,16 @@
+{
+  "name": "terrytilley.com",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.html",
+  "scripts": {
+    "tailwind:dev": "npx tailwindcss -i ./styles.css -o ./dist/styles.css --watch",
+    "tailwind:build": "npx tailwindcss -i ./styles.css -o ./dist/styles.css --minify",
+    "serve": "npx http-server -p 3000"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.5"
+  },
+  "author": "Terry Tilley <terry@terrytilley.com>",
+  "license": "MIT"
+}
